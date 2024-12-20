@@ -1,0 +1,11 @@
+CREATE TABLE `data`(
+	`id` INT(255) PRIMARY KEY AUTO_INCREMENT,
+    `name` VARCHAR(255) COLLATE utf8mb4_general_ci NOT NULL,
+    `email` VARCHAR(255) COLLATE utf8mb4_general_ci NOT NULL,
+    `password` VARCHAR(255) COLLATE utf8mb4_general_ci NOT NULL,
+    `a_id` INT(255) NOT NULL,
+    FOREIGN KEY(`a_id`) REFERENCES address(id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+inserted data 
+INSERT INTO `address`(location) VALUES('Azimpur'),('Agargaon'),('Motijhil');
